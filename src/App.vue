@@ -2,6 +2,7 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/Navigation">登入</router-link>
   </div>
   <router-view />
 </template>
@@ -28,3 +29,10 @@
   }
 }
 </style>
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>

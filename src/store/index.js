@@ -1,8 +1,21 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    userID: "",
+    provider: "",
+  },
   mutations: {},
-  actions: {},
+  actions: {
+    oAuthLogIn({ state }, { provider, id_token }) {
+      state.userID = id_token;
+      state.provider = provider;
+    },
+    oAuthLogOut({ state }) {
+      // console.log("vuex", provider, id_token);
+      state.userID = "";
+      state.provider = "";
+    },
+  },
   modules: {},
 });
